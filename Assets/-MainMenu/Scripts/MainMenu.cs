@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour {
 
     [Tooltip("A reference to the scene's camera.")]
-    public MainMenuCameraControl camera;
+    public MainMenuCameraControl sceneCamera;
 
     [Tooltip("A reference to the details menu GUI.")]
     public DetailsMenu detailsMenu;
@@ -31,32 +31,48 @@ public class MainMenu : MonoBehaviour {
         foreach (LevelInfo level in levels) {
             bttns.Add(MakeButton().Init(level, () => {
                 detailsMenu.Init(level);
-                camera.lookAtLevelDetails = true;
+                sceneCamera.lookAtLevelDetails = true;
             }));
         }
         bttns.Add(MakeButton().Init("Quit", () => { }));
     }
     MainMenuButton MakeButton() {
-        MainMenuButton bttn = Instantiate(prefabButton, transform);
+        int marginLeft = 10;
+        int marginTop = 10;
+        int buttonWidth = 420;
+        int buttonHeight = 100;
 
-        int y = 0;
+        int y = marginTop;
+        int x = marginLeft;
+
         if (bttns.Count > 0) {
             MainMenuButton lastBttn = bttns[bttns.Count - 1];
-            int height = (int)lastBttn.GetSize().y;
-            int position = (int)lastBttn.transform.localPosition.y;
-            y = position - height - 10;
+
+            int cols = 2;
+            int col = bttns.Count % cols;
+            int row = bttns.Count / cols;
+
+            x = marginLeft + col * buttonWidth;
+            y = marginTop + row * buttonHeight; 
+
         }
-        bttn.transform.localPosition = new Vector3(0, y, 0);
+        
+        MainMenuButton bttn = Instantiate(prefabButton, transform);
+        (bttn.transform as RectTransform).anchoredPosition = new Vector2(x, -y);
+
         return bttn;
     }
 
     void Update() {
-        if (camera.lookAtLevelDetails) return;
+        if (sceneCamera.lookAtLevelDetails) return;
         Focus();
     }
     void Focus() {
+        
         if(events.currentSelectedGameObject == null) {
-            if(bttns.Count > 0) bttns[0].Focus();
+            if (bttns.Count > 0) {
+                events.SetSelectedGameObject(bttns[0].gameObject);
+            }
         }
     }
 }

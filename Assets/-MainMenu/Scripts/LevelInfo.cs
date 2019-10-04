@@ -9,6 +9,7 @@ public class LevelInfo {
     public string studentName;
     public Sprite buttonSprite;
     public Color buttonTextColor = Color.black;
-    public string splashComments;
-    public Sprite splashSprite;
+    public string splashScreenComments;
+    public Sprite splashScreenImage;
+    public Transform splashScreenPrefab;
 }

@@ -35,9 +35,32 @@ public class MainMenuCameraControl : MonoBehaviour
         }
 
         float percent = time / easeTime;
+
+        if (!lookAtLevelDetails) percent = 1 - percent;
+
         percent = cameraEasing.Evaluate(percent);
 
-        transform.position = Vector3.Lerp(startPosition, endPosition, percent);
-        transform.rotation = Quaternion.Slerp(startRotation, endRotation, percent);
+        if (!lookAtLevelDetails) percent = 1 - percent;
+
+        transform.position = ExtraLerp(startPosition, endPosition, percent);
+        transform.rotation = ExtraLerp(startRotation, endRotation, percent);
+    }
+    Quaternion ExtraLerp(Quaternion min, Quaternion max, float p) {
+        return new Quaternion(
+                ExtraLerp(min.x, max.x, p),
+                ExtraLerp(min.y, max.y, p),
+                ExtraLerp(min.z, max.z, p),
+                ExtraLerp(min.w, max.w, p)
+            );
+    }
+    Vector3 ExtraLerp(Vector3 min, Vector3 max, float p) {
+        return new Vector3(
+                ExtraLerp(min.x, max.x, p),
+                ExtraLerp(min.y, max.y, p),
+                ExtraLerp(min.z, max.z, p)
+            );
+    }
+    float ExtraLerp(float min, float max, float p) {
+        return (max - min) * p + min;
     }
 }

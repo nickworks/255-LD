@@ -7,10 +7,11 @@ using UnityEngine.UI;
 
 public class DetailsMenu : MonoBehaviour
 {
-    public MainMenuCameraControl camera;
+    public MainMenuCameraControl sceneCamera;
     public Image detailsImage;
     public Text detailsComments;
 
+    Transform splashScreenScene;
     EventSystem events;
     LevelInfo level;
     void Start() {
@@ -18,17 +19,22 @@ public class DetailsMenu : MonoBehaviour
     }
     public void Init(LevelInfo level) {
         this.level = level;
-        detailsImage.sprite = level.splashSprite;
-        detailsComments.text = level.splashComments;
+        detailsImage.sprite = level.splashScreenImage;
+        detailsComments.text = 
+            $"<size=40><color=white>{level.levelName}</color>\n<color=#888>{level.studentName}</color></size>\n{level.splashScreenComments}";
+        if (level.splashScreenPrefab)
+            splashScreenScene = Instantiate(level.splashScreenPrefab, transform, true); // spawn prefab, as a child of this object
     }
     void Update() {
-        if (!camera.lookAtLevelDetails) return;
+        if (!sceneCamera.lookAtLevelDetails) {
+            if (splashScreenScene != null) Destroy(splashScreenScene.gameObject);
+            return;
+        }
         Focus();
     }
     void Focus() {
         if (events != null && events.currentSelectedGameObject == null) {
-            Button bttn = events.firstSelectedGameObject.GetComponent<Button>();
-            bttn.Select();
+            events.SetSelectedGameObject(events.firstSelectedGameObject);
         }
     }
     public void ButtonClickPlay() {
@@ -36,6 +42,6 @@ public class DetailsMenu : MonoBehaviour
         SceneManager.LoadScene(level.levelFilename, LoadSceneMode.Single);
     }
     public void ButtonClickBack() {
-        camera.lookAtLevelDetails = false;
+        sceneCamera.lookAtLevelDetails = false;
     }
 }

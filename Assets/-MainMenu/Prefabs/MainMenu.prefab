@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 6223450075706780621}
   - component: {fileID: 6223450075706780620}
   - component: {fileID: 6223450075706780608}
+  - component: {fileID: 5007376726716485945}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -104,7 +105,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1600, y: 900}
   m_Pivot: {x: 0, y: 0}
 --- !u!223 &6223450075706780622
 Canvas:
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e1de5a3b3030842ae622ef1b8313d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  sceneCamera: {fileID: 0}
   detailsMenu: {fileID: 0}
   prefabButton: {fileID: 3465258786895165514, guid: c2634ab4279aa9942901108086f30a9d,
     type: 3}
@@ -188,19 +189,30 @@ MonoBehaviour:
     studentName: 
     buttonSprite: {fileID: 0}
     buttonTextColor: {r: 0.9433962, g: 0.25585064, b: 0, a: 1}
-    splashComments: 
-    splashSprite: {fileID: 0}
+    splashScreenComments: 
+    splashScreenImage: {fileID: 0}
+    splashScreenPrefab: {fileID: 0}
   - levelName: Valley of the Ancients
     levelFilename: 
     studentName: 
     buttonSprite: {fileID: 0}
     buttonTextColor: {r: 0.31199196, g: 0.06941971, b: 0.9811321, a: 1}
-    splashComments: 
-    splashSprite: {fileID: 0}
+    splashScreenComments: 
+    splashScreenImage: {fileID: 0}
+    splashScreenPrefab: {fileID: 0}
   - levelName: Julie's Cesspool
     levelFilename: 
     studentName: 
     buttonSprite: {fileID: 0}
     buttonTextColor: {r: 0.4528302, g: 0.4032393, b: 0.15592737, a: 1}
-    splashComments: 
-    splashSprite: {fileID: 0}
+    splashScreenComments: 
+    splashScreenImage: {fileID: 0}
+    splashScreenPrefab: {fileID: 0}
+--- !u!222 &5007376726716485945
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6223450075706780619}
+  m_CullTransparentMesh: 0
