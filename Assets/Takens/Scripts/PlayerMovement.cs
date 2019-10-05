@@ -8,7 +8,7 @@ namespace Takens
     {
 
 
-        private enum Movement {leftTurn, rightTurn, walking, none};
+        private enum Movement { leftTurn, rightTurn, walking, none };
         private Movement currentMotion;
         private int currentRoom = 0;
 
@@ -31,11 +31,11 @@ namespace Takens
         [SerializeField]
         private GameObject yawControl;
         [SerializeField]
-        private float sensitivityX = 1f;
+        private float sensitivityX = 5f;
         [SerializeField]
-        private float sensitivityY = 1f;
-        private float maxY = 50f;
-        private float maxX = 50f;
+        private float sensitivityY = 5f;
+        private float maxY = 15f;
+        private float maxX = 15f;
 
         private float pitch = 0f;
         private float yaw = 0f;
@@ -49,6 +49,7 @@ namespace Takens
         // Update is called once per frame
         void Update()
         {
+            
             if (currentMotion == Movement.none)
             {
                 float h = sensitivityX * Input.GetAxis("Mouse X");
@@ -57,19 +58,24 @@ namespace Takens
                 pitch += v;
                 yaw += h;
 
-                pitchControl.transform.localEulerAngles = new Vector3(-pitch,0,0);
+                if (pitch > maxY) pitch = maxY;
+                else if (pitch < -maxY) pitch = -maxY;
+                if (yaw > maxX) yaw = maxX;
+                else if (yaw < -maxX) yaw = -maxX;
+
+                pitchControl.transform.localEulerAngles = new Vector3(-pitch, 0, 0);
                 yawControl.transform.localEulerAngles = new Vector3(0, yaw, 0);
 
 
-               // pitch.transform.Rotate(0, h, 0);
+                // pitch.transform.Rotate(0, h, 0);
                 //cam.transform.Rotate(-v, h, 0);
 
                 if (Input.GetKeyDown(KeyCode.A))
                 {
-                   initialRotation = transform.rotation;
+                    initialRotation = transform.rotation;
                     rotationObject.transform.Rotate(0, -90, 0);
                     ticker = 0;
-                   currentMotion = Movement.leftTurn;
+                    currentMotion = Movement.leftTurn;
                 }
                 if (Input.GetKeyDown(KeyCode.W))
                 {
@@ -93,7 +99,7 @@ namespace Takens
                         if (ticker > 1)
                             ticker = 1;
                         transform.rotation = Quaternion.Lerp(initialRotation, rotationObject.transform.rotation, SCurve.Evaluate(ticker));
-                        if(ticker == 1)
+                        if (ticker == 1)
                         {
                             currentMotion = Movement.none;
                             ticker = 0;
@@ -127,13 +133,14 @@ namespace Takens
                 }
             }
 
-           
+
 
         }
 
         private bool walk()
         {
-            if (currentRoom == 0) {
+            if (currentRoom == 0)
+            {
                 switch (Mathf.Round(transform.localEulerAngles.y))
                 {
                     case (0):
@@ -143,18 +150,21 @@ namespace Takens
                     case (180):
                         break;
                     case (270):
-                        rotationObject.transform.position = new Vector3(-14f, 1.62f, .76f);
-                        initialPosition = transform.position;
-                        currentMotion = Movement.walking;
-                        ticker = 0;
-                        currentRoom = 1;
+                        if (Inventory.main.hasFirstKey)
+                        {
+                            rotationObject.transform.position = new Vector3(-14f, 1.62f, .76f);
+                            initialPosition = transform.position;
+                            currentMotion = Movement.walking;
+                            ticker = 0;
+                            currentRoom = 1;
 
+                        }
                         break;
                     default:
                         break;
                 }
             }
-            else if(currentRoom == 1)
+            else if (currentRoom == 1)
             {
                 switch (Mathf.Round(transform.localEulerAngles.y))
                 {
@@ -181,7 +191,7 @@ namespace Takens
                         break;
                 }
             }
-            else if(currentRoom == 2)
+            else if (currentRoom == 2)
             {
 
                 switch (Mathf.Round(transform.localEulerAngles.y))
