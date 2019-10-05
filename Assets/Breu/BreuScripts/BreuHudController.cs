@@ -9,6 +9,10 @@ namespace Breu
     public class BreuHudController : MonoBehaviour
     {
 
+        public Canvas SideBar;
+        public Canvas TutKey;
+        public Canvas Key;
+
         private static BreuHudController current;
         // Start is called before the first frame update
         void Start()
@@ -22,6 +26,9 @@ namespace Breu
             {
                 Destroy(this);
             }
+            SetUIAlpha(SideBar);
+            SetUIAlpha(TutKey);
+            SetUIAlpha(Key);
         }
 
         // Update is called once per frame
@@ -29,15 +36,29 @@ namespace Breu
         {
 
         }
-
+        void SetUIAlpha(Canvas canvas)
+        {
+            CanvasGroup CG = canvas.GetComponent<CanvasGroup>();
+            CG.alpha = 0f;
+        }
 
 
         #region Load Levels
         public void loadLevel2()
         {
-            BreuInventory.main.tutorialKey = true;
             SceneManager.LoadScene("BreuScene02", LoadSceneMode.Single);
-            print("button");
+        }
+        public void loadLevel3()
+        {
+            SceneManager.LoadScene("BreuScene03", LoadSceneMode.Single);
+        }
+        public void loadLevel4()
+        {
+            SceneManager.LoadScene("BreuScene04", LoadSceneMode.Single);
+        }
+        public void loadLevel5()
+        {
+            SceneManager.LoadScene("BreuScene05", LoadSceneMode.Single);
         }
 
         #endregion

@@ -23,10 +23,13 @@ namespace Breu
         public static void Reset()
         {
             main.foundKey = false;
-            main.tutorialKey = false;
-        }
 
-        public bool tutorialKey = false;
+        }
+        public bool unlockedInventory = false;
+        public bool unlockedChat = false;
+
+        public bool tutKey = false;
+        public bool tutDoor = false;
 
         public bool foundKey = false;
         
