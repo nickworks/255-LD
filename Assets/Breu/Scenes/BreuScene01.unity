@@ -432,9 +432,10 @@ GameObject:
   - component: {fileID: 236295036}
   - component: {fileID: 236295035}
   - component: {fileID: 236295034}
+  - component: {fileID: 236295039}
   m_Layer: 5
   m_Name: Button Canvas
-  m_TagString: Untagged
+  m_TagString: BreuButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,6 +532,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &236295039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236295033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41be8530f284272409cb3941079d9f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &383120213
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +553,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383120215}
-  - component: {fileID: 383120214}
   - component: {fileID: 383120216}
   m_Layer: 5
   m_Name: Text Canvases
@@ -549,24 +561,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &383120214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383120213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6748b01457b0d9642a6f234b5c3785d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text1: {fileID: 0}
-  Text2: {fileID: 0}
-  Text3: {fileID: 0}
-  Text4: {fileID: 0}
-  PostKeyButton: {fileID: 0}
-  PostDoorButton: {fileID: 0}
 --- !u!224 &383120215
 RectTransform:
   m_ObjectHideFlags: 0
@@ -608,6 +602,7 @@ MonoBehaviour:
   Text4: {fileID: 236295037}
   PostKeyButton: {fileID: 0}
   PostDoorButton: {fileID: 0}
+  UIButton: {fileID: 2075869374}
 --- !u!1 &484486792
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +615,7 @@ GameObject:
   - component: {fileID: 484486795}
   - component: {fileID: 484486794}
   m_Layer: 5
-  m_Name: Greeting
+  m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -675,10 +670,10 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hello!
+  m_Text: Well, I guess seeing is overrated.
 --- !u!222 &484486795
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -767,7 +762,7 @@ GameObject:
   - component: {fileID: 526878980}
   - component: {fileID: 526878979}
   m_Layer: 5
-  m_Name: Tutorial Canvas
+  m_Name: Tutorial Key Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1251,7 +1246,7 @@ GameObject:
   - component: {fileID: 852817672}
   - component: {fileID: 852817671}
   m_Layer: 5
-  m_Name: Greeting 3
+  m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1306,10 +1301,10 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Me? Oh, I'm nothing.
+  m_Text: Sitting here isn't going to make anything happen.
 --- !u!222 &852817672
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1405,7 +1400,7 @@ GameObject:
   - component: {fileID: 910258530}
   - component: {fileID: 910258529}
   m_Layer: 5
-  m_Name: Greeting 2
+  m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1463,7 +1458,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: You must be someone, right?
+  m_Text: '...'
 --- !u!222 &910258530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1561,7 +1556,7 @@ GameObject:
   - component: {fileID: 998455964}
   - component: {fileID: 998455967}
   m_Layer: 5
-  m_Name: Greet Canvas
+  m_Name: Canvas 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1785,7 +1780,7 @@ GameObject:
   - component: {fileID: 1299909885}
   - component: {fileID: 1299909888}
   m_Layer: 5
-  m_Name: InventoryCanvas
+  m_Name: Inventory Sidebar Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2081,9 +2076,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1c848a2acefc2f408457a739c13cce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SideBar: {fileID: 1299909887}
-  TutKey: {fileID: 526878982}
-  Key: {fileID: 1184817655}
+  UISideBar: {fileID: 1299909887}
+  UITutKey: {fileID: 526878982}
+  UIKey: {fileID: 1184817655}
 --- !u!114 &1541532484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2296,7 +2291,7 @@ GameObject:
   - component: {fileID: 1811232735}
   - component: {fileID: 1811232734}
   m_Layer: 5
-  m_Name: Greet 3 Canvas
+  m_Name: Canvas 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2491,7 +2486,7 @@ GameObject:
   - component: {fileID: 1918496547}
   - component: {fileID: 1918496546}
   m_Layer: 5
-  m_Name: Greet 2 Canvas
+  m_Name: Canvas 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2659,7 +2654,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Nothing?
+  m_Text: Wander
 --- !u!222 &1955683543
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2932,14 +2927,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2075869375}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: c1c848a2acefc2f408457a739c13cce5, type: 3}
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 236295039}
+        m_MethodName: loadLevel2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

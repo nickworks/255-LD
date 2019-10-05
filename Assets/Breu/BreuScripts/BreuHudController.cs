@@ -9,9 +9,10 @@ namespace Breu
     public class BreuHudController : MonoBehaviour
     {
 
-        public Canvas SideBar;
-        public Canvas TutKey;
-        public Canvas Key;
+        public Canvas UISideBar;
+        public Canvas UITutKey;
+        public Canvas UIKey;
+
 
         private static BreuHudController current;
         // Start is called before the first frame update
@@ -26,41 +27,38 @@ namespace Breu
             {
                 Destroy(this);
             }
-            SetUIAlpha(SideBar);
-            SetUIAlpha(TutKey);
-            SetUIAlpha(Key);
+            MakeInvisable(UISideBar);
+            MakeInvisable(UITutKey);
+            MakeInvisable(UIKey);
         }
 
         // Update is called once per frame
         void Update()
         {
+            if (BreuInventory.main.tutKey == true)
+            {
+                MakeVisable(UISideBar);
+                MakeVisable(UITutKey);
+            }
+            if (BreuInventory.main.tutKey == false)
+            {
+                MakeInvisable(UITutKey);
+            }
 
         }
-        void SetUIAlpha(Canvas canvas)
+        void MakeInvisable(Canvas canvas)
         {
             CanvasGroup CG = canvas.GetComponent<CanvasGroup>();
             CG.alpha = 0f;
         }
 
-
-        #region Load Levels
-        public void loadLevel2()
+        void MakeVisable(Canvas canvas)
         {
-            SceneManager.LoadScene("BreuScene02", LoadSceneMode.Single);
-        }
-        public void loadLevel3()
-        {
-            SceneManager.LoadScene("BreuScene03", LoadSceneMode.Single);
-        }
-        public void loadLevel4()
-        {
-            SceneManager.LoadScene("BreuScene04", LoadSceneMode.Single);
-        }
-        public void loadLevel5()
-        {
-            SceneManager.LoadScene("BreuScene05", LoadSceneMode.Single);
+            CanvasGroup CG = canvas.GetComponent<CanvasGroup>();
+            CG.alpha = 1f;
         }
 
-        #endregion
+
+        
     }
 }

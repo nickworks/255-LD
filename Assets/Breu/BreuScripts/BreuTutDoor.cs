@@ -14,10 +14,12 @@ namespace Breu
         {
             GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, 1);
             GetComponent<BoxCollider2D>().enabled = false;
+            /*
             if (BreuInventory.main.tutDoor == true)
             {
                 Destroy(gameObject);
             }
+            */
         }
 
         // Update is called once per frame
@@ -31,10 +33,14 @@ namespace Breu
             }
         }
 
-        void OnMouseDown()
+        void OnMouseUp()
         {
-            BreuInventory.main.tutDoor = true;
-            Destroy(gameObject);
+            if (BreuInventory.main.tutKey == true)
+            {
+                BreuInventory.main.tutKey = false;
+                BreuInventory.main.tutDoor = true;
+                Destroy(gameObject);
+            }
         }
     }
 }
