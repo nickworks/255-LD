@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Pattison/Scenes/TableDemo.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/-MainMenu/MainMenu.unity
+    guid: 93e7757b2904eca40ab95fda41c73254
+  - enabled: 1
+    path: Assets/Takens/Scenes/TakensScene01.unity
+    guid: d703885db9edb084fa82ff3358e6f4f8
+  - enabled: 1
+    path: Assets/Breu/Scenes/BreuScene01.unity
+    guid: d8bc89c637667a8478793934b36af79b
+  - enabled: 1
+    path: Assets/Breu/Scenes/BreuScene02.unity
+    guid: fcbb27695943d36428ecceb50ced03fe
   m_configObjects: {}
