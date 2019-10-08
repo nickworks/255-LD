@@ -150,9 +150,9 @@ namespace Takens
                     case (180):
                         break;
                     case (270):
-                        if (Inventory.main.hasFirstKey)
+                        if (Inventory.main.hasUnlockedDoorOne)
                         {
-                            rotationObject.transform.position = new Vector3(-14f, 1.62f, .76f);
+                            rotationObject.transform.position = new Vector3(-14f, 1.3f, .76f);
                             initialPosition = transform.position;
                             currentMotion = Movement.walking;
                             ticker = 0;
@@ -171,7 +171,7 @@ namespace Takens
                     case (0):
                         break;
                     case (90):
-                        rotationObject.transform.position = new Vector3(0f, 1.62f, .76f);
+                        rotationObject.transform.position = new Vector3(-2f, 1.3f, .76f);
                         initialPosition = transform.position;
                         currentMotion = Movement.walking;
                         ticker = 0;
@@ -180,12 +180,15 @@ namespace Takens
                     case (180):
                         break;
                     case (270):
-                        rotationObject.transform.position = new Vector3(-28f, 1.62f, .76f);
-                        initialPosition = transform.position;
-                        currentMotion = Movement.walking;
-                        ticker = 0;
-                        currentRoom = 2;
+                        if (Inventory.main.hasUnlockedDoorTwo)
+                        {
+                            rotationObject.transform.position = new Vector3(-28f, 1.3f, .76f);
+                            initialPosition = transform.position;
+                            currentMotion = Movement.walking;
+                            ticker = 0;
+                            currentRoom = 2;
 
+                        }
                         break;
                     default:
                         break;
@@ -199,7 +202,7 @@ namespace Takens
                     case (0):
                         break;
                     case (90):
-                        rotationObject.transform.position = new Vector3(-14f, 1.62f, .76f);
+                        rotationObject.transform.position = new Vector3(-14f, 1.3f, .76f);
                         initialPosition = transform.position;
                         currentMotion = Movement.walking;
                         ticker = 0;
