@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Breu/Scenes/BreuScene02.unity
     guid: fcbb27695943d36428ecceb50ced03fe
+  - enabled: 1
+    path: Assets/Andrea/Scenes/AndreaScene01.unity
+    guid: 4f8c70de856625a42a5eda7543e5e24c
   m_configObjects: {}
