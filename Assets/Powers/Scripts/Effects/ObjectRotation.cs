@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectRotation : MonoBehaviour
+namespace Powers
 {
-    public float rotationSpeed;
-
-    // Update is called once per frame
-    void Update()
+    public class ObjectRotation : MonoBehaviour
     {
-        transform.Rotate(Vector3.forward, Time.deltaTime * rotationSpeed);
+        public float rotationSpeed;
+
+        // Update is called once per frame
+        void Update()
+        {
+            transform.Rotate(Vector3.up, Time.deltaTime * rotationSpeed);
+        }
     }
 }
