@@ -1454,12 +1454,12 @@ PrefabInstance:
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.data[7].levelFilename
-      value: Petzak's Game
+      value: PetzakScene01
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.data[7].studentName
-      value: PetzakScene01
+      value: Petzak's Game
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}

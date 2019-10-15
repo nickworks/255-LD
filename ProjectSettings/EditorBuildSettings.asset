@@ -45,9 +45,9 @@ EditorBuildSettings:
     path: Assets/Jennings/Scenes/JenningsScene01.unity
     guid: 80adadb5b04559c4b85f84eabd756653
   - enabled: 1
-    path: Assets/Myles/Scenes/MylesScene01.unity
-    guid: 8b0210b9ea6ecc940a311bf5dec0b96c
-  - enabled: 1
     path: Assets/Petzak/Scenes/PetzakScene01.unity
     guid: ed76dfec990a62b4f95040cf4f0f4a7d
+  - enabled: 1
+    path: Assets/Myles/Scenes/MylesScene01.unity
+    guid: 8b0210b9ea6ecc940a311bf5dec0b96c
   m_configObjects: {}
