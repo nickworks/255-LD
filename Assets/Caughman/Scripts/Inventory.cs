@@ -10,7 +10,7 @@ namespace Caughman
         public readonly static Inventory main = new Inventory();
 
         public bool hasKey = false;
-
+        public bool hasDrawerKey = false;
 
             private Inventory()
             {

@@ -10,6 +10,7 @@ namespace Caughman
         {
             Inventory.main.hasKey = true;
             Destroy(gameObject);
+            Debug.Log("Key Get");
         }
     }
 }
