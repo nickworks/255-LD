@@ -9,10 +9,10 @@ namespace Caughman
     {
         private void OnMouseDown()
         {
-            if (Inventory.main.hasKey)
+            if (Inventory.main.hasDrawerKey)
             {
-                GetComponent<ChangeRoom>().gotoNextRoom();
-                //TODO: Change rooms
+                GetComponent<ChangeScene>().gotoNextScene();
+                
             }
         }
     }

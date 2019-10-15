@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Andrea/Scenes/AndreaScene01.unity
     guid: 4f8c70de856625a42a5eda7543e5e24c
+  - enabled: 1
+    path: Assets/Caughman/Scenes/CaughmanScene01.unity
+    guid: 035cdceb3819620439dbae682ef3cff3
+  - enabled: 1
+    path: Assets/Caughman/Scenes/CaughmanScene02.unity
+    guid: ce178f5c0f19b624bb27c296f7d2320e
   m_configObjects: {}
