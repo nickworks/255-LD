@@ -5,11 +5,11 @@ using UnityEngine;
 namespace Jennings {
 
 
-    public class PickupKey : MonoBehaviour {
+    public class PickupKey1 : MonoBehaviour {
 
         void OnMouseDown()
         {
-            Inventory.main.hasKey = true;
+            Inventory.main.hasKey1 = true;
             Destroy(gameObject);
         }
     }
