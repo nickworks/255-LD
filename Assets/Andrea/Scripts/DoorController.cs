@@ -6,8 +6,10 @@ namespace Andrea
 {
     public class DoorController : MonoBehaviour
     {
+        public Transform player;
+        public Transform nextRoom;
 
-        public bool nextAreaAccessible;
+        public bool nextAreaAccessible = true;
         // Start is called before the first frame update
         void Start()
         {
@@ -31,7 +33,7 @@ namespace Andrea
 
         public void GotoNextRoom()
         {
-
+            player.position = nextRoom.position;
         }
     }
 }
