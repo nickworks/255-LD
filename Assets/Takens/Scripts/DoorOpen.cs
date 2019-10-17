@@ -15,9 +15,10 @@ namespace Takens
         void OnMouseDown()
         {
             Debug.Log("hi");
-            if (doorNumber == 0 && Inventory.main.hasFirstKey)
+            if (doorNumber == 0 && Inventory.main.hasItem(ItemType.keyOne))
             {
                 Inventory.main.hasUnlockedDoorOne = true;
+                Inventory.main.Set(ItemType.keyOne, false);
                 Debug.Log("playing");
                 GetComponent<Animator>().SetBool("isOpened", true);
 

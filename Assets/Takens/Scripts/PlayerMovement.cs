@@ -88,6 +88,7 @@ namespace Takens
                     rotationObject.transform.Rotate(0, 90, 0);
                     ticker = 0;
                     currentMotion = Movement.rightTurn;
+
                 }
             }
             else
@@ -139,9 +140,10 @@ namespace Takens
 
         private bool walk()
         {
+            int rot = (int)Mathf.Round(transform.localEulerAngles.y);
             if (currentRoom == 0)
             {
-                switch (Mathf.Round(transform.localEulerAngles.y))
+                switch (rot)
                 {
                     case (0):
                         break;
@@ -166,7 +168,7 @@ namespace Takens
             }
             else if (currentRoom == 1)
             {
-                switch (Mathf.Round(transform.localEulerAngles.y))
+                switch (rot)
                 {
                     case (0):
                         break;
@@ -197,7 +199,7 @@ namespace Takens
             else if (currentRoom == 2)
             {
 
-                switch (Mathf.Round(transform.localEulerAngles.y))
+                switch (rot)
                 {
                     case (0):
                         break;
