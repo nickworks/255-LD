@@ -32,7 +32,7 @@ public class BreuLevelController : MonoBehaviour
     }
     public void loadLevel5()
     {
-        SceneManager.LoadScene("BreuScene05", LoadSceneMode.Single);
+        SceneManager.LoadScene("BreuScene05-North", LoadSceneMode.Single);
     }
 
     #endregion
