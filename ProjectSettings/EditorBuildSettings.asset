@@ -9,18 +9,48 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/-MainMenu/MainMenu.unity
+    guid: 93e7757b2904eca40ab95fda41c73254
+  - enabled: 1
+    path: Assets/Takens/Scenes/TakensScene01.unity
+    guid: d703885db9edb084fa82ff3358e6f4f8
+  - enabled: 1
     path: Assets/Breu/Scenes/BreuScene01.unity
     guid: d8bc89c637667a8478793934b36af79b
   - enabled: 1
     path: Assets/Breu/Scenes/BreuScene02.unity
     guid: fcbb27695943d36428ecceb50ced03fe
   - enabled: 1
-    path: Assets/Breu/Scenes/BreuScene03.unity
-    guid: 1bcdc3b71e964a942823ab26a752f277
+    path: Assets/Andrea/Scenes/AndreaScene01.unity
+    guid: 4f8c70de856625a42a5eda7543e5e24c
   - enabled: 1
-    path: Assets/Breu/Scenes/BreuScene04.unity
-    guid: 8f4bd453e128af847b6fcb3f697be757
+    path: Assets/Andrea/Scenes/AndreaScene02.unity
+    guid: dc494328b4ca4f7478360c8bbd123966
   - enabled: 1
-    path: Assets/Breu/Scenes/BreuScene05.unity
-    guid: 3793c2273dc74714dba5ca64858592fe
+    path: Assets/Caughman/Scenes/CaughmanScene01.unity
+    guid: 035cdceb3819620439dbae682ef3cff3
+  - enabled: 1
+    path: Assets/Powers/Scenes/PowersGame.unity
+    guid: 58b8d7a29627a3647af182cbcd13d423
+  - enabled: 1
+    path: Assets/Stralle/Scenes/StralleScene01.unity
+    guid: 116a75fddd055b042a731fb7e91e3829
+  - enabled: 1
+    path: Assets/Smith/Scenes/SmithScene01.unity
+    guid: 12cb80ebbebf246498ce0a102d4f5cbf
+  - enabled: 1
+    path: Assets/Powers/Scenes/PowersScene01.unity
+    guid: 465e5bce60a4a544d8a6ff3476faaef5
+  - enabled: 1
+    path: Assets/Powers/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Jennings/Scenes/JenningsScene01.unity
+    guid: 80adadb5b04559c4b85f84eabd756653
+  - enabled: 1
+    path: Assets/Petzak/Scenes/PetzakScene01.unity
+    guid: ed76dfec990a62b4f95040cf4f0f4a7d
+  - enabled: 1
+    path: Assets/Myles/Scenes/MylesScene01.unity
+    guid: 8b0210b9ea6ecc940a311bf5dec0b96c
   m_configObjects: {}

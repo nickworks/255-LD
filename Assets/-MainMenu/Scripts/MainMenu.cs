@@ -34,7 +34,9 @@ public class MainMenu : MonoBehaviour {
                 sceneCamera.lookAtLevelDetails = true;
             }));
         }
-        bttns.Add(MakeButton().Init("Quit", () => { }));
+        bttns.Add(MakeButton().Init("Quit", () => {
+            Application.Quit();
+        }));
     }
     MainMenuButton MakeButton() {
         int marginLeft = 10;
