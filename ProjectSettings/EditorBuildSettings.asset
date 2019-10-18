@@ -11,21 +11,48 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/-MainMenu/MainMenu.unity
     guid: 93e7757b2904eca40ab95fda41c73254
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Takens/Scenes/TakensScene01.unity
-    guid: d703885db9edb084fa82ff3358e6f4f8
-  - enabled: 1
-    path: Assets/Breu/Scenes/BreuScene01.unity
+    path: Assets/Breu/BreuScenes/BreuScene01.unity
     guid: d8bc89c637667a8478793934b36af79b
   - enabled: 1
-    path: Assets/Breu/Scenes/BreuScene02.unity
+    path: Assets/Breu/BreuScenes/BreuScene02.unity
     guid: fcbb27695943d36428ecceb50ced03fe
   - enabled: 1
-    path: Assets/Andrea/Scenes/AndreaScene01.unity
-    guid: 4f8c70de856625a42a5eda7543e5e24c
+    path: Assets/Breu/BreuScenes/BreuScene03.unity
+    guid: 1bcdc3b71e964a942823ab26a752f277
   - enabled: 1
-    path: Assets/Andrea/Scenes/AndreaScene02.unity
-    guid: dc494328b4ca4f7478360c8bbd123966
+    path: Assets/Breu/BreuScenes/BreuScene04.unity
+    guid: 8f4bd453e128af847b6fcb3f697be757
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene05-North.unity
+    guid: 3676e2349674e4b4b89da9a9739e787e
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene06-West.unity
+    guid: 9189377c60f6c67418d3489f12a99991
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene07-South.unity
+    guid: de2851a4ec54a8c498d678242fc6e64b
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene08-East.unity
+    guid: 47732300879008b4f858b180bd42c733
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene09-Floor.unity
+    guid: d648340d2bcd6394bbd7d1cae07c0391
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene10-Ceiling.unity
+    guid: d05f4c32a3822aa46aca7858c9942e08
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuSceneEnd.unity
+    guid: 3793c2273dc74714dba5ca64858592fe
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Caughman/Scenes/CaughmanScene01.unity
     guid: 035cdceb3819620439dbae682ef3cff3
@@ -44,9 +71,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Powers/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Jennings/Scenes/JenningsScene01.unity
-    guid: 80adadb5b04559c4b85f84eabd756653
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Petzak/Scenes/PetzakScene01.unity
     guid: ed76dfec990a62b4f95040cf4f0f4a7d
