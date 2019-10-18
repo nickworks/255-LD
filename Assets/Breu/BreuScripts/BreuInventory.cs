@@ -25,13 +25,39 @@ namespace Breu
             main.foundKey = false;
 
         }
+
+        #region Tutorial items
         public bool unlockedInventory = false;
         public bool unlockedChat = false;
 
         public bool tutKey = false;
         public bool tutDoor = false;
+        #endregion
 
+        #region Main game items
         public bool foundKey = false;
-        
+        public bool hasKey = false;
+
+        public bool foundHandle = false;
+        public bool hasHandle = false;
+
+        public bool foundPole = false;
+        public bool hasPole = false;
+
+        public bool hasLever = false;
+
+        public bool foundOil = false;
+        public bool hasOil = false;
+
+        public bool foundClock = false;
+        public bool hasClock = false;
+
+        public bool foundCutter = false;
+        public bool hasCutter = false;
+
+        public bool foundMallet = false;
+        public bool hasMallet = false;
+        #endregion
+
     }
 }
