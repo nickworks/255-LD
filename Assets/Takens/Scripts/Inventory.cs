@@ -23,6 +23,7 @@ namespace Takens
 
 
         public Dictionary<ItemType, bool> Items = new Dictionary<ItemType, bool>();
+        public ItemType selectedItem = ItemType.empty;
 
         public bool hasItem(ItemType i)
         {

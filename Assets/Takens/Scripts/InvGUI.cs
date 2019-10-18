@@ -1,19 +1,67 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 namespace Takens {
+
     public class InvGUI : MonoBehaviour
     {
+        private bool isDisplaying = false;
+        private float speed = 3f;
+        public Text displayText;
+        public Text itemDesc;
+
         // Start is called before the first frame update
         void Start()
         {
             Inventory.main.Set(ItemType.empty, false);
         }
 
-        // Update is called once per frame
-        void Update()
+        public void displayMessage(string msg)
         {
+            if (!isDisplaying)
+                StartCoroutine(Display(msg)); 
+        }
 
+        public void Update()
+        {
+            switch (Inventory.main.selectedItem)
+            {
+                case (ItemType.empty):
+                    itemDesc.text = "";
+                        break;
+                case (ItemType.keyOne):
+                    itemDesc.text = "Use door key on...";
+                        break;
+                case (ItemType.keyTwo):
+                    itemDesc.text = "Use door key on...";
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public IEnumerator Display(string msg)
+        {
+            
+            isDisplaying = true;
+            displayText.text = msg;
+            displayText.color = new Color(displayText.color.r, displayText.color.g, displayText.color.b, 0);
+            while(displayText.color.a < 1f)
+            {
+                displayText.color = new Color(displayText.color.r, displayText.color.g, displayText.color.b, displayText.color.a + (Time.deltaTime * speed));
+                yield return null;
+            }
+            yield return new WaitForSeconds(.4f);
+
+            displayText.color = new Color(displayText.color.r, displayText.color.g, displayText.color.b, 1f);
+            while (displayText.color.a > 0f)
+            {
+                displayText.color = new Color(displayText.color.r, displayText.color.g, displayText.color.b, displayText.color.a - (Time.deltaTime * speed));
+                yield return null;
+            }
+            isDisplaying = false;
         }
     }
 }

@@ -34,8 +34,8 @@ namespace Takens
         private float sensitivityX = 5f;
         [SerializeField]
         private float sensitivityY = 5f;
-        private float maxY = 15f;
-        private float maxX = 15f;
+        private float maxY = 20f;
+        private float maxX = 20f;
 
         private float pitch = 0f;
         private float yaw = 0f;
