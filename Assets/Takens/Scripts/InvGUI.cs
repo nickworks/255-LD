@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace Takens {
 
@@ -20,8 +21,11 @@ namespace Takens {
 
         public void displayMessage(string msg)
         {
-            if (!isDisplaying)
-                StartCoroutine(Display(msg)); 
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                if (!isDisplaying)
+                    StartCoroutine(Display(msg));
+            }
         }
 
         public void Update()
@@ -36,6 +40,21 @@ namespace Takens {
                         break;
                 case (ItemType.keyTwo):
                     itemDesc.text = "Use door key on...";
+                    break;
+                case (ItemType.tinderBox):
+                    itemDesc.text = "Use tinderbox on...";
+                    break;
+                case (ItemType.hammer):
+                    itemDesc.text = "Use hammer on...";
+                    break;
+                case (ItemType.nightStandKey):
+                    itemDesc.text = "Use nightstand key on...";
+                    break;
+                case (ItemType.candleStick):
+                    itemDesc.text = "Use candlestick key on...";
+                    break;
+                case (ItemType.codeBreaker):
+                    itemDesc.text = "Use code breaker on...";
                     break;
                 default:
                     break;
@@ -53,7 +72,7 @@ namespace Takens {
                 displayText.color = new Color(displayText.color.r, displayText.color.g, displayText.color.b, displayText.color.a + (Time.deltaTime * speed));
                 yield return null;
             }
-            yield return new WaitForSeconds(.4f);
+            yield return new WaitForSeconds(.5f);
 
             displayText.color = new Color(displayText.color.r, displayText.color.g, displayText.color.b, 1f);
             while (displayText.color.a > 0f)

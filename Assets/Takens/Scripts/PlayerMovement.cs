@@ -19,7 +19,7 @@ namespace Takens
         private Vector3 initialPosition;
 
         [SerializeField]
-        private float rotationSpeed = .1f;
+        private float rotationSpeed = .13f;
         [SerializeField]
         private float movementSpeed = .1f;
         [SerializeField]
@@ -73,7 +73,7 @@ namespace Takens
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     initialRotation = transform.rotation;
-                    rotationObject.transform.Rotate(0, -90, 0);
+                    rotationObject.transform.Rotate(0, -45, 0);
                     ticker = 0;
                     currentMotion = Movement.leftTurn;
                 }
@@ -85,7 +85,7 @@ namespace Takens
                 if (Input.GetKeyDown(KeyCode.D))
                 {
                     initialRotation = transform.rotation;
-                    rotationObject.transform.Rotate(0, 90, 0);
+                    rotationObject.transform.Rotate(0, 45, 0);
                     ticker = 0;
                     currentMotion = Movement.rightTurn;
 

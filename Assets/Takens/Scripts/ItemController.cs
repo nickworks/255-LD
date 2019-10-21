@@ -2,33 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace Takens
 {
-    public class ItemController : MonoBehaviour
+    namespace Takens
     {
-        public ItemType thisItem;
-        private InvGUI i;
-        public void Start()
+        public class ItemController : MonoBehaviour
         {
-            i = GameObject.FindGameObjectWithTag("Canvas").GetComponent<InvGUI>();
-        }
-        void OnMouseDown()
-        {
-            switch (thisItem)
+            public ItemType thisItem;
+            private InvGUI i;
+            public void Start()
             {
-                case (ItemType.keyOne):
-                    i.displayMessage("You picked up an old door key!");
-                    break;
-                case (ItemType.keyTwo):
-                    i.displayMessage("You picked up an old door key!");
-                    break;
-                default:
-                    break;
+                i = GameObject.FindGameObjectWithTag("Canvas").GetComponent<InvGUI>();
             }
+            void OnMouseDown()
+            {
+                switch (thisItem)
+                {
+                    case (ItemType.keyOne):
+                        i.displayMessage("You picked up an old key!");
+                        break;
+                    case (ItemType.keyTwo):
+                        i.displayMessage("You picked up an old key!");
+                        break;
+                    case (ItemType.tinderBox):
+                        i.displayMessage("You picked up a tinderbox!");
+                        break;
+                    case (ItemType.codeBreaker):
+                        i.displayMessage("You picked up a codebreaker!");
+                        break;
+                    default:
+                        break;
+                }
 
-            Inventory.main.Set(thisItem, true);
-            Destroy(gameObject);
+                Inventory.main.Set(thisItem, true);
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Takens
 {
 
-    public enum ItemType { empty, keyOne, keyTwo}
+    public enum ItemType { empty, keyOne, keyTwo, tinderBox, hammer, nightStandKey, candleStick, codeBreaker, message}
     
 
     public class Inventory
@@ -45,13 +45,12 @@ namespace Takens
             }
         }
 
-
-
-
        // public bool hasFirstKey;
         public bool hasUnlockedDoorOne;
       //  public bool hasSecondKey;
         public bool hasUnlockedDoorTwo;
+        public bool hasCompletedLightPuzzle = false;
+        public bool hasCompletedCandleStick = false;
 
     }
 }
