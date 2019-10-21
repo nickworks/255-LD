@@ -48,7 +48,8 @@ namespace Takens
                     {
                         isLocked = false;
                         invgui.displayMessage("You unlocked the nightstand!");
-                        Inventory.main.Set(ItemType.nightStandKey, false);
+                        //Inventory.main.Set(ItemType.nightStandKey, false);
+                        StartCoroutine("OpenDrawer");
                     }
                     else if (itemToUnlock == ItemType.candleStick && Inventory.main.hasCompletedCandleStick)
                     {

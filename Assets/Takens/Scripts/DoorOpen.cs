@@ -26,7 +26,7 @@ namespace Takens
                 if (Inventory.main.selectedItem == ItemType.keyOne)
                 {
                     Inventory.main.hasUnlockedDoorOne = true;
-                    Inventory.main.Set(ItemType.keyOne, false);
+                    //Inventory.main.Set(ItemType.keyOne, false);
                     GetComponent<Animator>().SetBool("isOpened", true);
 
 
@@ -48,7 +48,7 @@ namespace Takens
                 if (Inventory.main.selectedItem == ItemType.keyTwo)
                 {
                     Inventory.main.hasUnlockedDoorTwo = true;
-                    Inventory.main.Set(ItemType.keyTwo, false);
+                    //Inventory.main.Set(ItemType.keyTwo, false);
                     GetComponent<Animator>().SetBool("isOpened", true);
 
 

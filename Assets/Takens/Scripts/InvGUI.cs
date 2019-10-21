@@ -56,6 +56,9 @@ namespace Takens {
                 case (ItemType.codeBreaker):
                     itemDesc.text = "Use code breaker on...";
                     break;
+                case (ItemType.message):
+                    itemDesc.text = "\"5 2 4 3 1\"";
+                    break;
                 default:
                     break;
             }
