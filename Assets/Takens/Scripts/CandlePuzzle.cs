@@ -8,6 +8,7 @@ namespace Takens
         public GameObject[] Candles;
         public GameObject completedLamp;
         public GameObject keyTwo;
+        public Material newMat;
 
         // Update is called once per frame
         void Update()
@@ -23,6 +24,7 @@ namespace Takens
                     }
                     Inventory.main.hasCompletedLightPuzzle = true;
                     completedLamp.SetActive(true);
+                    completedLamp.transform.parent.gameObject.GetComponent<Renderer>().material = newMat;
                     keyTwo.SetActive(true);
                 }
             }
