@@ -10,7 +10,7 @@ namespace Jennings {
         void OnMouseDown()
         {
             // Inventory is the public class, main is the singleton instance of inventory in the class, with hasKey being it's boolean property
-            if(Inventory.main.hasKey1)
+            if(InventoryOG.main.hasKey1)
             {
                 GetComponent<ChangeRooms>().GotoNextRoom();
 
