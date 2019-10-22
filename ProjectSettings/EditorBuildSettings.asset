@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Andrea/Scenes/AndreaScene01.unity
     guid: 4f8c70de856625a42a5eda7543e5e24c
+  - enabled: 1
+    path: Assets/Powers/Scenes/Powers_Scene1.unity
+    guid: ea0c2b50029a89045b341bab038214ef
+  - enabled: 1
+    path: Assets/Powers/Scenes/Powers_Scene2.unity
+    guid: b75ee40f39fea7f4d932bf9ebe4daa69
+  - enabled: 1
+    path: Assets/Powers/Scenes/Powers_Scene3.unity
+    guid: a930ef2c4b5bf05408f6095d3dfb57cb
   m_configObjects: {}

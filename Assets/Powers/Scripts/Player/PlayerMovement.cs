@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Powers
 {
@@ -13,6 +11,7 @@ namespace Powers
         public float walkSpeed = 4.0f;
         public bool allowRun = true;
         public float runSpeed = 8.0f;
+        public bool allowCrouch = true;
         public float crouchSpeed = 3.0f;
 
         [Header("Character Jump")]
@@ -106,9 +105,8 @@ namespace Powers
 
             //set player speed depending on player input
             if (Input.GetButton("Fire3") && allowRun && !isCrouching) speed = Mathf.SmoothDamp(speed, runSpeed, ref velocityY, 0.2f);
-            else if (isCrouching) speed = Mathf.SmoothDamp(speed, crouchSpeed, ref velocityY, 0.1f);
-            else if (!isCrouching && !isSprinting) speed = Mathf.SmoothDamp(speed, walkSpeed, ref velocityY, 0.2f);
-            else speed = Mathf.SmoothDamp(speed, 0, ref velocityY, 0.1f);
+            else if (isCrouching && allowCrouch) speed = Mathf.SmoothDamp(speed, crouchSpeed, ref velocityY, 0.1f);
+            else speed = Mathf.SmoothDamp(speed, walkSpeed, ref velocityY, 0.2f);
 
             #endregion
 

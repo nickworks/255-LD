@@ -1138,7 +1138,7 @@ PrefabInstance:
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
@@ -1168,22 +1168,22 @@ PrefabInstance:
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.data[3].levelName
-      value: Point n Click Puzzle
+      value: ABST
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.data[3].buttonTextColor.r
-      value: 0.4528302
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.data[3].buttonTextColor.g
-      value: 0.4032393
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.data[3].buttonTextColor.b
-      value: 0.15592737
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
@@ -1410,6 +1410,27 @@ PrefabInstance:
         type: 3}
       propertyPath: levels.Array.data[2].buttonTextColor.b
       value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
+        type: 3}
+      propertyPath: levels.Array.data[3].levelFilename
+      value: Powers_Scene1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
+        type: 3}
+      propertyPath: levels.Array.data[3].studentName
+      value: Proxy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
+        type: 3}
+      propertyPath: levels.Array.data[3].splashScreenImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 951e23694fddb794c81ab72e9b4bf0e9,
+        type: 3}
+    - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
+        type: 3}
+      propertyPath: levels.Array.data[3].splashScreenComments
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6421585309313591920, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
