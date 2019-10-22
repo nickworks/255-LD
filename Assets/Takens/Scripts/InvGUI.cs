@@ -57,7 +57,7 @@ namespace Takens {
                     itemDesc.text = "Use code breaker on...";
                     break;
                 case (ItemType.message):
-                    itemDesc.text = "\"5 2 4 3 1\"";
+                    itemDesc.text = (Inventory.main.code[0].ToString() + Inventory.main.code[1].ToString() + Inventory.main.code[2].ToString() + Inventory.main.code[3].ToString() + Inventory.main.code[4].ToString() + Inventory.main.code[5].ToString());
                     break;
                 default:
                     break;

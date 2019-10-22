@@ -51,6 +51,8 @@ namespace Takens
         public bool hasUnlockedDoorTwo;
         public bool hasCompletedLightPuzzle = false;
         public bool hasCompletedCandleStick = false;
-
+        public Dictionary<int, int> code = new Dictionary<int, int>(); 
+        public Dictionary<int, int> currentCode = new Dictionary<int, int>();
+        public bool completedGame = false;
     }
 }
