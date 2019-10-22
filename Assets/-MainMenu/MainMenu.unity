@@ -1414,12 +1414,12 @@ PrefabInstance:
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.data[3].levelFilename
-      value: PowersGame
+      value: Powers_Scene1
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.data[3].studentName
-      value: Powers
+      value: PROXY
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
@@ -1515,6 +1515,17 @@ PrefabInstance:
         type: 3}
       propertyPath: levels.Array.data[10].buttonTextColor.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
+        type: 3}
+      propertyPath: levels.Array.data[3].splashScreenImage
+      value: 
+      objectReference: {fileID: 21300000, guid: f0fbba953e21eac4eb747b4006e57ac3,
+        type: 3}
+    - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
+        type: 3}
+      propertyPath: levels.Array.data[3].splashScreenComments
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6421585309313591920, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
