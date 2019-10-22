@@ -37,6 +37,13 @@ namespace Breu
             MakeInvisable(UISideBar);
             MakeInvisable(UITutKey);
             MakeInvisable(UIKey);
+            MakeInvisable(UIHandle);
+            MakeInvisable(UIPole);
+            MakeInvisable(UILever);
+            MakeInvisable(UIOil);
+            MakeInvisable(UIClock);
+            MakeInvisable(UICutter);
+            MakeInvisable(UIMallet);
         }
 
         // Update is called once per frame

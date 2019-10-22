@@ -9,7 +9,10 @@ namespace Breu
         // Start is called before the first frame update
         void Start()
         {
-
+            if (BreuInventory.main.foundCutter == true)
+            {
+                Destroy(gameObject);
+            }
         }
 
         // Update is called once per frame

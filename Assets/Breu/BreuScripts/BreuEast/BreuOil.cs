@@ -10,7 +10,10 @@ namespace Breu
         // Start is called before the first frame update
         void Start()
         {
-
+            if (BreuInventory.main.foundOil == true)
+            {
+                Destroy(Oil);
+            }
         }
 
         // Update is called once per frame

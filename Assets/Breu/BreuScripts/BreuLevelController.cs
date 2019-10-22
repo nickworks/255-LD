@@ -5,18 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class BreuLevelController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     #region Load Levels
     public void loadLevel2()
     {
