@@ -9,19 +9,13 @@ namespace Myles
     public class PickupItem : MonoBehaviour
     {
         
-        
-
-       
-
         public Item item;
         
         private void OnMouseDown()
         {
             Inventory.main.Set(item);
             Destroy(gameObject);
-
             
-
         }
         
     }
