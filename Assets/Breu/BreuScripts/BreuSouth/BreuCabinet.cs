@@ -19,7 +19,7 @@ namespace Breu
         }
         void OnMouseUp()
         {
-            if (BreuInventory.main.foundPole == false)
+            if (BreuInventory.main.foundPole == false && BreuWorldControllerr.main.brokeChains == true)
             {
                 BreuInventory.main.foundPole = true;
                 BreuInventory.main.hasPole = true;

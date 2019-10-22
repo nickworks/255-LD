@@ -21,7 +21,7 @@ namespace Breu
         }
         void OnMouseUp()
         {
-            if (BreuInventory.main.hasKey == true)
+            if (BreuInventory.main.usingKey == true)
             {
                 SceneManager.LoadScene("BreuSceneEnd", LoadSceneMode.Single);
             }
