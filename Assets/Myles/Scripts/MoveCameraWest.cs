@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace Myles
 {
-    public class PickupKey : MonoBehaviour
+    public class MoveCameraWest : MonoBehaviour
     {
         void OnMouseDown()
         {
-            Inventory.main.hasKey = true;
-            Destroy(gameObject);
+            GameObject.Find("ForestCamera (1)").transform.position = new Vector3(30, 3, -39);
+            
         }
     }
 }
