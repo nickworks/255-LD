@@ -1474,12 +1474,12 @@ PrefabInstance:
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.data[9].levelFilename
-      value: Stralle's Game
+      value: StralleScene01
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
       propertyPath: levels.Array.data[9].studentName
-      value: StralleScene01
+      value: Stralle
       objectReference: {fileID: 0}
     - target: {fileID: 6223450075706780608, guid: 74f6f874feb53f94fa052fd8491334e3,
         type: 3}
