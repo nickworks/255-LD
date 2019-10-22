@@ -23,7 +23,7 @@ namespace Andrea
                 Pickup();
             }
 
-            if (Inventory.singleton.hasKey)
+            if (Inventory.singleton.HasItem(Item.Sword))
             {
                 Destroy(gameObject);
             }
@@ -31,7 +31,7 @@ namespace Andrea
 
         void Pickup()
         {
-            Inventory.singleton.hasKey = true;
+            Inventory.singleton.Set(Item.Sword);
             Destroy(gameObject);
         }
 

@@ -1,20 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PinballPointValue : MonoBehaviour
+namespace Andrea
 {
-    public int bumperValue = 50;
-    public GameObject scoreManager;
-    PinballScore pinballScore;
-
-    void Start()
+    public class PinballPointValue : MonoBehaviour
     {
-        pinballScore = scoreManager.GetComponent<PinballScore>();
-    }
-    void OnCollisionEnter()
-    {
-        pinballScore.score += bumperValue;
-    }
+        public int bumperValue = 50;
+        public GameObject scoreManager;
+        PinballScore pinballScore;
+        //public GameObject scorePanel;
+        public Text scoreText;
 
+        void Start()
+        {
+            pinballScore = scoreManager.GetComponent<PinballScore>();
+            //scoreText = scorePanel.transform.Find("Score").GetChild(0).GetComponent<Text>();
+        }
+        void OnCollisionEnter()
+        {
+            pinballScore.score += bumperValue;
+            //scoreText.text = $"Score: {pinballScore.score}";
+        }
+
+    }
 }

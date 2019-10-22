@@ -6,9 +6,10 @@ public class PinballState : MonoBehaviour
 {
     public GameObject ball;
     public GameObject player;
+    private Vector3 ballStartingPos = new Vector3();
     void Start()
     {
-        
+        ballStartingPos = ball.transform.position;
     }
 
     // Update is called once per frame
@@ -19,6 +20,6 @@ public class PinballState : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        player.SetActive(true);
+        Instantiate(ball, ballStartingPos, Quaternion.identity);        
     }
 }

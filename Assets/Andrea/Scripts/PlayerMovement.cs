@@ -29,36 +29,36 @@ namespace Andrea
                 return;
 
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
-                RaycastHit hit;
-
-                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
-                {
-                    agent.destination = hit.point;
-                }
+                GetInteraction();
             }
 
-            /*if ((agent.remainingDistance <= agent.stoppingDistance * stopDistanceProportion) &&  currentInteractable)
-            {
-                transform.rotation = currentInteractable.interactionLocation.rotation;
-                currentInteractable.Interact();
-                currentInteractable = null;
-                StartCoroutine(WaitForInteraction());
-            }*/
         }
 
-        public void OnInteractableClick (Interactable interactable)
+        public void GetInteraction ()
         {
-            if (!handleInput)
+            RaycastHit hit;
+
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
             {
-                return;
+                if (!agent.enabled)
+                {
+                    agent.enabled = true;
+                    return;
+                }
+                GameObject interactedObject = hit.collider.gameObject;
+                if (interactedObject.tag == "Interactable Object")
+                {
+                    interactedObject.GetComponent<Interactable>().MoveToInteraction(agent);
+                }
+                else
+                {
+                    agent.stoppingDistance = 0f;
+                    agent.destination = hit.point;
+                }
+                
             }
-
-            //currentInteractable = interactable;
-            //destinationPosition = currentInteractable.interactionLocation.position;
-
-            agent.destination = destinationPosition;
         }
 
         private IEnumerator WaitForInteraction()

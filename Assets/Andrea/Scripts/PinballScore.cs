@@ -1,17 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PinballScore : MonoBehaviour
+namespace Andrea
 {
-    public int score;
-    void Start()
-    {
-        Reset();
-    }
 
-    public void Reset()
+
+    public class PinballScore : MonoBehaviour
     {
-        score = 0;
+        public int score;
+        public Text scoreText;
+        void Start()
+        {
+            Reset();
+        }
+
+        void Update()
+        {
+            scoreText.text = $"Score: {score}";
+
+            if (score >= 3000)
+            {
+                Inventory.singleton.Set(Item.Ticket);
+            }
+        }
+
+        public void Reset()
+        {
+            score = 0;
+        }
     }
 }
