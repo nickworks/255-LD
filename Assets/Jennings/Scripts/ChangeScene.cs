@@ -43,9 +43,9 @@ namespace Jennings
         void OnMouseDown()
         {
 
-            SceneManager.LoadScene(index);
+            //SceneManager.LoadScene(index);
 
-            //SceneManager.LoadScene(levelName);
+            SceneManager.LoadScene(levelName);
         }
 
     }

@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Jennings/Scenes/JenningsScene04.unity
+    guid: 1c59410ed01f73e4baca9c50a4c0d6b0
+  - enabled: 1
     path: Assets/Breu/BreuScenes/BreuScene01.unity
     guid: d8bc89c637667a8478793934b36af79b
   - enabled: 1
@@ -83,12 +86,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Smith/Scenes/SmithScene01.unity
     guid: 12cb80ebbebf246498ce0a102d4f5cbf
-  - enabled: 1
-    path: Assets/Powers/Scenes/PowersScene01.unity
-    guid: 465e5bce60a4a544d8a6ff3476faaef5
-  - enabled: 1
-    path: Assets/Powers/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
