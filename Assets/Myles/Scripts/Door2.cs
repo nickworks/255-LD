@@ -9,7 +9,7 @@ namespace Myles
     {
         void OnMouseDown()
         {
-            if (Inventory.main.hasKey)
+            if (Inventory.main.HasItem(Item.Paper))
             {
                 GetComponent<ChangeRoom>().GotoNextRoom();
                 
