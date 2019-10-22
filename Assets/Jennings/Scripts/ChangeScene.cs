@@ -8,7 +8,11 @@ namespace Jennings
 {
     public class ChangeScene : MonoBehaviour
 {
-        private static ChangeScene current;
+
+        public int index;
+        public string levelName;
+
+        /* private static ChangeScene current;
 
         void Start()
         {
@@ -25,6 +29,8 @@ namespace Jennings
 
         }
 
+
+
         public void LoadNextScene()
         {
             void OnPointerDown()
@@ -32,6 +38,15 @@ namespace Jennings
                 //print("CLICKED");
                 SceneManager.LoadScene("JenningsScene02", LoadSceneMode.Single);
             }
+        }*/
+
+        void OnMouseDown()
+        {
+
+            SceneManager.LoadScene(index);
+
+            //SceneManager.LoadScene(levelName);
         }
+
     }
 }
