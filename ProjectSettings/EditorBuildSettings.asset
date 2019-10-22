@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Jennings/Scenes/JenningsScene01.unity
     guid: 80adadb5b04559c4b85f84eabd756653
   - enabled: 1
+    path: Assets/Caughman/Scenes/CaughmanScene02.unity
+    guid: ce178f5c0f19b624bb27c296f7d2320e
+  - enabled: 1
     path: Assets/Breu/BreuScenes/BreuScene02.unity
     guid: fcbb27695943d36428ecceb50ced03fe
   - enabled: 1
