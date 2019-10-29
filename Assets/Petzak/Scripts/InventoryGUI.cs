@@ -15,27 +15,31 @@ namespace Petzak
 
         void OnMouseDown()
         {
-            print("asdf");
+            //print("asdf");
         }
 
         // Start is called before the first frame update
         void Start()
         {
-            Inventory.main.Set(Item.Shirt);
-            Inventory.main.Set(Item.Pants);
+            //Inventory.main.Set(Item.Shirt);
+            //Inventory.main.Set(Item.Pants);
         }
 
         // Update is called once per frame
         void Update()
         {
-            //if (Inventory.main.selectedItem == Item.None)
-            //{
-            //    textHint.text = "";
-            //}
-            //else
-            //{
-            //    textHint.text = $"Use {Inventory.main.selectedItem} on ...";
-            //}
+            if (textHint == null)
+                return;
+
+            //print(Inventory.main.selectedItem);
+            if (Inventory.main.selectedItem == Item.None)
+            {
+                textHint.text = "";
+            }
+            else
+            {
+                textHint.text = $"Use {Inventory.main.selectedItem} on ...";
+            }
         }
     }
 }

@@ -7,9 +7,16 @@ namespace Petzak
     public enum Item
     {
         None,
-        Shirt,
-        Pants,
-        Gloves
+        Rock1,
+        Rock2,
+        Rock3,
+        Lasso,
+        Slingshot,
+        Sword,
+        Torch,
+        RedKey,
+        BlueKey,
+        PurpleKey
     }
 
     public class Inventory
@@ -18,7 +25,7 @@ namespace Petzak
 
         public Dictionary<Item, bool> items = new Dictionary<Item, bool>();
 
-        public Item selectedItem = Item.Shirt;
+        public Item selectedItem = Item.None;
 
         public bool HasItem(Item item)
         {
@@ -37,9 +44,7 @@ namespace Petzak
 
         private Inventory()
         {
-            //items.Add(Item.Shirt, true);
-            //items.Add(Item.Pants, false);
-            //items.Add(Item.Gloves, false);
+
         }
     }
 }

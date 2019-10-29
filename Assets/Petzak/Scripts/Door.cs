@@ -1,36 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 namespace Petzak
 {
-    public class Arrow : MonoBehaviour
+    public class Door : MonoBehaviour
     {
         bool clicked = false;
         public int fromCamera;
         public int toCamera;
-
-        public Arrow()
-        {
-        }
 
         void OnMouseDown()
         {
             clicked = true;
         }
 
+        // Start is called before the first frame update
         void Start()
         {
 
         }
 
+        // Update is called once per frame
         void Update()
         {
             if (clicked)
             {
-                if (toCamera == 6 && !Game.main.BridgeLowered)
+                if ((gameObject.name == "BlueDoor" && Inventory.main.selectedItem != Item.BlueKey) ||
+                    (gameObject.name == "RedDoor" && Inventory.main.selectedItem != Item.RedKey) ||
+                    (gameObject.name == "PurpleDoor" && Inventory.main.selectedItem != Item.PurpleKey))
+                {
+                    clicked = false;
                     return;
+                }
 
                 var cameras = new Camera[11];
                 Camera.GetAllCameras(cameras);
@@ -45,9 +47,11 @@ namespace Petzak
 
                     if (c.name.Replace("Cam", "") == toCamera.ToString())
                     {
+                        if (fromCamera == 6 && Game.main.MainDoorLocked)
+                            continue;
+
                         c.depth = 2;
                         Game.main.CurrentCamera = toCamera;
-                        print(toCamera);
                     }
                     else
                     {

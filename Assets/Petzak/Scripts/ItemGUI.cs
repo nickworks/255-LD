@@ -22,6 +22,8 @@ namespace Petzak
 
         public void HandleClick()
         {
+            
+
             Inventory.main.selectedItem = item;
         }
     }
