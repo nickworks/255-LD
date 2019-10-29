@@ -19,7 +19,7 @@ namespace Takens
         private Vector3 initialPosition;
 
         [SerializeField]
-        private float rotationSpeed = .1f;
+        private float rotationSpeed = .13f;
         [SerializeField]
         private float movementSpeed = .1f;
         [SerializeField]
@@ -34,8 +34,8 @@ namespace Takens
         private float sensitivityX = 5f;
         [SerializeField]
         private float sensitivityY = 5f;
-        private float maxY = 15f;
-        private float maxX = 15f;
+        private float maxY = 20f;
+        private float maxX = 20f;
 
         private float pitch = 0f;
         private float yaw = 0f;
@@ -73,7 +73,7 @@ namespace Takens
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     initialRotation = transform.rotation;
-                    rotationObject.transform.Rotate(0, -90, 0);
+                    rotationObject.transform.Rotate(0, -45, 0);
                     ticker = 0;
                     currentMotion = Movement.leftTurn;
                 }
@@ -85,9 +85,10 @@ namespace Takens
                 if (Input.GetKeyDown(KeyCode.D))
                 {
                     initialRotation = transform.rotation;
-                    rotationObject.transform.Rotate(0, 90, 0);
+                    rotationObject.transform.Rotate(0, 45, 0);
                     ticker = 0;
                     currentMotion = Movement.rightTurn;
+
                 }
             }
             else
@@ -139,9 +140,10 @@ namespace Takens
 
         private bool walk()
         {
+            int rot = (int)Mathf.Round(transform.localEulerAngles.y);
             if (currentRoom == 0)
             {
-                switch (Mathf.Round(transform.localEulerAngles.y))
+                switch (rot)
                 {
                     case (0):
                         break;
@@ -150,9 +152,9 @@ namespace Takens
                     case (180):
                         break;
                     case (270):
-                        if (Inventory.main.hasFirstKey)
+                        if (Inventory.main.hasUnlockedDoorOne)
                         {
-                            rotationObject.transform.position = new Vector3(-14f, 1.62f, .76f);
+                            rotationObject.transform.position = new Vector3(-14f, 1.3f, .76f);
                             initialPosition = transform.position;
                             currentMotion = Movement.walking;
                             ticker = 0;
@@ -166,12 +168,12 @@ namespace Takens
             }
             else if (currentRoom == 1)
             {
-                switch (Mathf.Round(transform.localEulerAngles.y))
+                switch (rot)
                 {
                     case (0):
                         break;
                     case (90):
-                        rotationObject.transform.position = new Vector3(0f, 1.62f, .76f);
+                        rotationObject.transform.position = new Vector3(-2f, 1.3f, .76f);
                         initialPosition = transform.position;
                         currentMotion = Movement.walking;
                         ticker = 0;
@@ -180,12 +182,15 @@ namespace Takens
                     case (180):
                         break;
                     case (270):
-                        rotationObject.transform.position = new Vector3(-28f, 1.62f, .76f);
-                        initialPosition = transform.position;
-                        currentMotion = Movement.walking;
-                        ticker = 0;
-                        currentRoom = 2;
+                        if (Inventory.main.hasUnlockedDoorTwo)
+                        {
+                            rotationObject.transform.position = new Vector3(-28f, 1.3f, .76f);
+                            initialPosition = transform.position;
+                            currentMotion = Movement.walking;
+                            ticker = 0;
+                            currentRoom = 2;
 
+                        }
                         break;
                     default:
                         break;
@@ -194,12 +199,12 @@ namespace Takens
             else if (currentRoom == 2)
             {
 
-                switch (Mathf.Round(transform.localEulerAngles.y))
+                switch (rot)
                 {
                     case (0):
                         break;
                     case (90):
-                        rotationObject.transform.position = new Vector3(-14f, 1.62f, .76f);
+                        rotationObject.transform.position = new Vector3(-14f, 1.3f, .76f);
                         initialPosition = transform.position;
                         currentMotion = Movement.walking;
                         ticker = 0;

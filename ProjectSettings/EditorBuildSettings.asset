@@ -5,19 +5,109 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/-MainMenu/MainMenu.unity
     guid: 93e7757b2904eca40ab95fda41c73254
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Jennings/Scenes/JenningsScene04.unity
+    guid: 1c59410ed01f73e4baca9c50a4c0d6b0
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene01.unity
+    guid: d8bc89c637667a8478793934b36af79b
+  - enabled: 1
+    path: Assets/Jennings/Scenes/JenningsScene02.unity
+    guid: 5a7712c68712a7347a611e52fd1f8404
+  - enabled: 1
+    path: Assets/Jennings/Scenes/JenningsScene03.unity
+    guid: 4d9d8bceb2d9b0f4498529189efb7fec
+  - enabled: 1
+    path: Assets/Jennings/Scenes/JenningsScene01.unity
+    guid: 80adadb5b04559c4b85f84eabd756653
+  - enabled: 1
+    path: Assets/Caughman/Scenes/CaughmanScene02.unity
+    guid: ce178f5c0f19b624bb27c296f7d2320e
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene02.unity
+    guid: fcbb27695943d36428ecceb50ced03fe
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene03.unity
+    guid: 1bcdc3b71e964a942823ab26a752f277
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene04.unity
+    guid: 8f4bd453e128af847b6fcb3f697be757
+  - enabled: 1
+    path: Assets/Andrea/Scenes/AndreaScene01.unity
+    guid: 4f8c70de856625a42a5eda7543e5e24c
+  - enabled: 1
+    path: Assets/Andrea/Scenes/AndreaScene03.unity
+    guid: 96a141bd652d05d47a7a820b939972d3
   - enabled: 1
     path: Assets/Takens/Scenes/TakensScene01.unity
     guid: d703885db9edb084fa82ff3358e6f4f8
   - enabled: 1
-    path: Assets/Breu/Scenes/BreuScene01.unity
-    guid: d8bc89c637667a8478793934b36af79b
+    path: Assets/Breu/BreuScenes/BreuScene05-North.unity
+    guid: 3676e2349674e4b4b89da9a9739e787e
   - enabled: 1
-    path: Assets/Breu/Scenes/BreuScene02.unity
-    guid: fcbb27695943d36428ecceb50ced03fe
+    path: Assets/Breu/BreuScenes/BreuScene06-West.unity
+    guid: 9189377c60f6c67418d3489f12a99991
   - enabled: 1
-    path: Assets/Andrea/Scenes/AndreaScene01.unity
-    guid: 4f8c70de856625a42a5eda7543e5e24c
+    path: Assets/Breu/BreuScenes/BreuScene07-South.unity
+    guid: de2851a4ec54a8c498d678242fc6e64b
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene08-East.unity
+    guid: 47732300879008b4f858b180bd42c733
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene09-Floor.unity
+    guid: d648340d2bcd6394bbd7d1cae07c0391
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuScene10-Ceiling.unity
+    guid: d05f4c32a3822aa46aca7858c9942e08
+  - enabled: 1
+    path: Assets/Breu/BreuScenes/BreuSceneEnd.unity
+    guid: 3793c2273dc74714dba5ca64858592fe
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Caughman/Scenes/CaughmanScene01.unity
+    guid: 035cdceb3819620439dbae682ef3cff3
+  - enabled: 1
+    path: Assets/Stralle/Scenes/StralleScene01.unity
+    guid: 116a75fddd055b042a731fb7e91e3829
+  - enabled: 1
+    path: Assets/Smith/Scenes/SmithScene01.unity
+    guid: 12cb80ebbebf246498ce0a102d4f5cbf
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Petzak/Scenes/PetzakScene01.unity
+    guid: ed76dfec990a62b4f95040cf4f0f4a7d
+  - enabled: 1
+    path: Assets/Myles/Scenes/MylesScene01.unity
+    guid: 8b0210b9ea6ecc940a311bf5dec0b96c
+  - enabled: 1
+    path: Assets/Powers/Scenes/Powers_Scene1.unity
+    guid: ea0c2b50029a89045b341bab038214ef
+  - enabled: 1
+    path: Assets/Powers/Scenes/Powers_Scene2.unity
+    guid: b75ee40f39fea7f4d932bf9ebe4daa69
+  - enabled: 1
+    path: Assets/Powers/Scenes/Powers_Scene3.unity
+    guid: a930ef2c4b5bf05408f6095d3dfb57cb
   m_configObjects: {}
