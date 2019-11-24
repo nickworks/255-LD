@@ -509,6 +509,11 @@ PrefabInstance:
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: DoorOpen
       objectReference: {fileID: 0}
+    - target: {fileID: 7779184334287240182, guid: e007f6c73db36f8449872d3684442b3d,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1868894608745149219}
     - target: {fileID: 1906906217, guid: e007f6c73db36f8449872d3684442b3d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -668,6 +673,11 @@ PrefabInstance:
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: DoorOpen
       objectReference: {fileID: 0}
+    - target: {fileID: 7779184334287240182, guid: e007f6c73db36f8449872d3684442b3d,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1868894608745149219}
     - target: {fileID: 1906906217, guid: e007f6c73db36f8449872d3684442b3d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1008,6 +1018,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2704110971525334838, guid: 2933193d93bcd664ba65addfb0d53ec4,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1868894608745149219}
     - target: {fileID: 6220071346204784529, guid: 2933193d93bcd664ba65addfb0d53ec4,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -30489,6 +30504,11 @@ PrefabInstance:
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: DoorOpen
       objectReference: {fileID: 0}
+    - target: {fileID: 7779184334287240182, guid: e007f6c73db36f8449872d3684442b3d,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1868894608745149219}
     - target: {fileID: 1906906217, guid: e007f6c73db36f8449872d3684442b3d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -30617,6 +30637,7 @@ GameObject:
   - component: {fileID: 1868894608745149222}
   - component: {fileID: 1868894608745149216}
   - component: {fileID: 6227564026191691618}
+  - component: {fileID: 1868894608745149219}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -30624,6 +30645,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1868894608745149219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868894608745149218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45c5835a6f874140bdd12cbe9bc37ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  haveRoomOneCode: 0
+  haveRoomOnePhoto: 0
+  haveRoomOneKey: 0
+  haveRoomTwoCode: 0
+  haveRoomTwoPhoto: 0
+  haveRoomTwoKey: 0
+  currentlySelectedItem: 0
+  codeRoomOneUI: {fileID: 0}
+  photoRoomOneUI: {fileID: 0}
+  keyRoomOneUI: {fileID: 0}
+  codeRoomTwoUI: {fileID: 0}
+  photoRoomTwoUI: {fileID: 0}
+  keyRoomTwoUI: {fileID: 0}
+  cursor: {fileID: 0}
+  cantUseObjectNotify: {fileID: 0}
+  codeRoomOneSelected: {fileID: 0}
+  photoRoomOneSelected: {fileID: 0}
+  keyRoomOneSelected: {fileID: 0}
+  codeRoomTwoSelected: {fileID: 0}
+  photoRoomTwoSelected: {fileID: 0}
+  keyRoomTwoSelected: {fileID: 0}
 --- !u!143 &1868894608745149222
 CharacterController:
   m_ObjectHideFlags: 0
@@ -30953,6 +31007,8 @@ MonoBehaviour:
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   hoverColor: {r: 0.1, g: 0.1, b: 0.1, a: 0}
   mustBeInTrigger: 1
+  inventory: {fileID: 1868894608745149219}
+  selectedItemNeeded: 0
   onClick:
     m_PersistentCalls:
       m_Calls:

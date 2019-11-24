@@ -18,6 +18,11 @@ namespace Powers
 
         [Space(10)]
 
+        public InventoryScript inventory;
+        public int selectedItemNeeded = 0;
+
+        [Space(10)]
+
         [Tooltip("The events to occur upon first click.")]
         public UnityEvent onClick;
         [Tooltip("Decides if there is an additional interaction after the first click.")]
@@ -38,13 +43,15 @@ namespace Powers
                 else affectedMaterial.SetColor("_EmissionColor", defaultColor);
 
                 //if mouse down and an interaction available, do an interaction.
-                if (Input.GetButtonDown("Submit") && !alreadyClicked)
+                if (Input.GetButtonDown("Submit") && !alreadyClicked && inventory.currentlySelectedItem == selectedItemNeeded)
                 {
                     onClick.Invoke();
                     alreadyClicked = true;
                 }
-                else if (Input.GetButtonDown("Submit") && alreadyClicked && interactionAfterFirstClick) afterClick.Invoke();
+                else if (Input.GetButtonDown("Submit") && alreadyClicked && interactionAfterFirstClick && inventory.currentlySelectedItem == selectedItemNeeded) afterClick.Invoke();
+                else if (Input.GetButtonDown("Submit") && inventory.currentlySelectedItem != selectedItemNeeded) inventory.cantUseObjectNotify.SetActive(true);
             }
+            else affectedMaterial.SetColor("_EmissionColor", defaultColor);
         }
 
         private void OnMouseExit()
