@@ -637,6 +637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 413250799}
   roomOne: {fileID: 2073510226}
+  roomTwo: {fileID: 1484070641}
 --- !u!65 &49281459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36991,7 +36992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 23
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &1484070642
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -44553,6 +44554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1017623919}
   roomOne: {fileID: 1484070641}
+  roomTwo: {fileID: 2058724761}
 --- !u!65 &1713749784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51031,7 +51033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 23
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &2058724762
 MeshFilter:
   m_ObjectHideFlags: 0

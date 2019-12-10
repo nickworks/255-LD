@@ -13671,7 +13671,8 @@ MonoBehaviour:
   lightsFiveAnimator: {fileID: 691974952}
   doorTemptingAnimator: {fileID: 1245889844}
   logoReveal: {fileID: 1797539516}
-  loadingPrefab: {fileID: 0}
+  loadingPrefab: {fileID: 8509311431875264520, guid: e40b99b05d0703041bce23bd52b1759a,
+    type: 3}
 --- !u!65 &1121051790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30657,12 +30658,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45c5835a6f874140bdd12cbe9bc37ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
   haveRoomOneCode: 0
   haveRoomOnePhoto: 0
   haveRoomOneKey: 0
   haveRoomTwoCode: 0
   haveRoomTwoPhoto: 0
   haveRoomTwoKey: 0
+  haveRoomThreeCode: 0
+  haveRoomThreePhoto: 0
+  haveRoomThreeKey: 0
   currentlySelectedItem: 0
   codeRoomOneUI: {fileID: 0}
   photoRoomOneUI: {fileID: 0}
@@ -30670,6 +30675,9 @@ MonoBehaviour:
   codeRoomTwoUI: {fileID: 0}
   photoRoomTwoUI: {fileID: 0}
   keyRoomTwoUI: {fileID: 0}
+  codeRoomThreeUI: {fileID: 0}
+  photoRoomThreeUI: {fileID: 0}
+  keyRoomThreeUI: {fileID: 0}
   cursor: {fileID: 0}
   cantUseObjectNotify: {fileID: 0}
   codeRoomOneSelected: {fileID: 0}
@@ -30678,6 +30686,9 @@ MonoBehaviour:
   codeRoomTwoSelected: {fileID: 0}
   photoRoomTwoSelected: {fileID: 0}
   keyRoomTwoSelected: {fileID: 0}
+  codeRoomThreeSelected: {fileID: 0}
+  photoRoomThreeSelected: {fileID: 0}
+  keyRoomThreeSelected: {fileID: 0}
 --- !u!143 &1868894608745149222
 CharacterController:
   m_ObjectHideFlags: 0
@@ -31391,23 +31402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275920d9b0fe9ff489c2ccfdb2de6146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 1868894609260223327}
-  playerLook: {fileID: 1868894609915661950}
-  postLayer: {fileID: 4630939879349845464}
-  postProcessing: {fileID: 11400000, guid: b4669386177de89488ee2e8d2406957d, type: 2}
-  cameraFOV: 90
-  mouseSensitivity: 3
-  antialiasing: 2
-  gameVolume: 1
-  aoEnabled: 1
-  bloomEnabled: 1
-  chromAbbEnabled: 1
-  motionBlurEnabled: 1
-  motionBlurIntensity: 2
-  vignetteEnabled: 1
-  softShadows: 1
-  shadowQuality: 2
-  shadowDistance: 2
 --- !u!33 &4976994617923573423
 MeshFilter:
   m_ObjectHideFlags: 0
