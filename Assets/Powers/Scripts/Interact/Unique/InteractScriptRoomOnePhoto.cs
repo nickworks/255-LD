@@ -25,7 +25,7 @@ namespace Powers
         private void OnMouseOver()
         {
             //checks to see if the player must be in a trigger and, if so, if they are in the trigger
-            if (inTrigger && inventory.haveRoomOnePhoto == true || inTrigger && inventory.haveRoomTwoPhoto == true)
+            if (inTrigger && inventory.haveRoomOnePhoto == true && inventory.currentlySelectedItem == 2 || inTrigger && inventory.haveRoomTwoPhoto == true && inventory.currentlySelectedItem == 5 || inTrigger && inventory.haveRoomThreePhoto == true && inventory.currentlySelectedItem == 8)
             {
                 //if interaction available, highlight.
                 affectedMaterial.SetColor("_EmissionColor", hoverColor);
@@ -35,8 +35,10 @@ namespace Powers
                 {
                     photo.SetActive(true);
                     keyHider.Play("room1_openKeyHolder");
+                    inventory.currentlySelectedItem = 0;
                     inventory.haveRoomOnePhoto = false;
                     inventory.haveRoomTwoPhoto = false;
+                    inventory.haveRoomThreePhoto = false;
                     gameObject.SetActive(false);
                 }
             }

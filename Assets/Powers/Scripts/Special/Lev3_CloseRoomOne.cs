@@ -11,6 +11,7 @@ namespace Powers
 
         public Animator door;
         public GameObject roomOne;
+        public GameObject roomTwo;
 
         // Update is called once per frame
         void Update()
@@ -29,6 +30,7 @@ namespace Powers
 
         IEnumerator CloseOffRoomOne()
         {
+            roomTwo.SetActive(true);
             door.Play("DoorClose");
             yield return new WaitForSeconds(2);
             roomOne.SetActive(false);

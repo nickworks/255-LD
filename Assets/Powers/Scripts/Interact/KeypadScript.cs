@@ -1,10 +1,22 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Powers
 {
     public class KeypadScript : MonoBehaviour
     {
+
+        //does this keypad use a timer. if so, what object will indicate it, and how long will the player have.
+        public bool includeTimer = false;
+        public GameObject timerObject;
+        public int timerLength;
+
+        private bool timerStarted = false;
+        private float timer = 0;
+
+        //has the safe opened?
+        private bool safeOpened = false;
 
         public Material indicator1;
         public Material indicator2;
@@ -33,6 +45,10 @@ namespace Powers
                     correctPinEvents.Invoke();
                     inventory.haveRoomOneCode = false;
                     inventory.haveRoomTwoCode = false;
+                    inventory.haveRoomThreeCode = false;
+                    safeOpened = true;
+                    timerStarted = false;
+                    if(includeTimer) timerObject.SetActive(false);
                     enabled = false;
                 }
                 else
@@ -48,6 +64,37 @@ namespace Powers
                 else if (currentPin.Length == 1) SetColors(true, false, false, false);
                 else if (currentPin.Length == 2) SetColors(true, true, false, false);
                 else if (currentPin.Length == 3) SetColors(true, true, true, false);
+            }
+
+            if(includeTimer)
+            {
+                //if player has started entering pin, start the timer
+                if (currentPin.Length > 0 && !timerStarted && !safeOpened)
+                {
+                    timerObject.SetActive(true);
+                    timer = timerLength;
+                    timerStarted = true;
+                }
+                else if(!timerStarted || safeOpened) timerObject.SetActive(false);
+            }
+
+            if (includeTimer && timerStarted)
+            {
+                //if timer isn't 0, count down. scale down indicator.
+                if (timer >= 0)
+                {
+                    float scale = timer / timerLength;
+                    scale = Mathf.Clamp(scale, 0, 1);
+                    timerObject.transform.localScale = new Vector3(timerObject.transform.localScale.x, timerObject.transform.localScale.y, scale);
+                    timer = timer - (1 * Time.deltaTime);
+                }
+                //if timer is 0 and safe isn't open, reset all values
+                else if (timer <= 0 && !safeOpened)
+                {
+                    SetColors(false, false, false, false);
+                    currentPin = "";
+                    timerStarted = false;
+                }
             }
         }
 

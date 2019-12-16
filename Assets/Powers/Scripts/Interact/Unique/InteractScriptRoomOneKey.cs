@@ -25,7 +25,7 @@ namespace Powers
         private void OnMouseOver()
         {
             //checks to see if the player must be in a trigger and, if so, if they are in the trigger
-            if (inTrigger && inventory.haveRoomOneKey == true || inTrigger && inventory.haveRoomTwoKey == true)
+            if (inTrigger && inventory.haveRoomOneKey == true && inventory.currentlySelectedItem == 3 || inTrigger && inventory.haveRoomTwoKey == true && inventory.currentlySelectedItem == 6 || inTrigger && inventory.haveRoomThreeKey == true && inventory.currentlySelectedItem == 9)
             {
                 //if interaction available, highlight.
                 affectedMaterial.SetColor("_EmissionColor", hoverColor);
@@ -37,6 +37,8 @@ namespace Powers
                     door.Play("DoorOpen", 0, 0f);
                     inventory.haveRoomOneKey = false;
                     inventory.haveRoomTwoKey = false;
+                    inventory.haveRoomThreeKey = false;
+                    inventory.currentlySelectedItem = 0;
                 }
             }
         }
